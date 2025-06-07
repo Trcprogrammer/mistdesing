@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mist Design - Soluciones Creativas Digitales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(229, 0, 0, 0.2);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #e50000;
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .portfolio-item {
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Header/Navbar -->
+    <header class="fixed w-full z-50 bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="#" class="flex items-center">
+                        <span class="text-2xl font-bold text-red-600">MIST</span>
+                        <span class="text-2xl font-bold text-black">DESING</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#inicio" class="nav-link text-black font-medium hover:text-red-600">Inicio</a>
+                    <a href="#servicios" class="nav-link text-black font-medium hover:text-red-600">Servicios</a>
+                    <a href="#portfolio" class="nav-link text-black font-medium hover:text-red-600">Portafolio</a>
+                    <a href="#nosotros" class="nav-link text-black font-medium hover:text-red-600">Nosotros</a>
+                    <a href="#contacto" class="nav-link text-black font-medium hover:text-red-600">Contacto</a>
+                </nav>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#inicio" class="block py-2 text-black hover:text-red-600">Inicio</a>
+                <a href="#servicios" class="block py-2 text-black hover:text-red-600">Servicios</a>
+                <a href="#portfolio" class="block py-2 text-black hover:text-red-600">Portafolio</a>
+                <a href="#nosotros" class="block py-2 text-black hover:text-red-600">Nosotros</a>
+                <a href="#contacto" class="block py-2 text-black hover:text-red-600">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-32 pb-24 md:pt-40 md:pb-32 text-white overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-black via-red-900 to-black opacity-95"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-16 lg:mb-0 lg:pr-12">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                        <span class="block">Transformamos tu</span>
+                        <span class="text-red-400 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">Visión en Realidad</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-10 text-gray-200 leading-relaxed max-w-lg">
+                        Soluciones digitales profesionales y creativas para impulsar tu marca al siguiente nivel con tecnología de punta y diseño innovador.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+                        <a href="#servicios" class="bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg font-bold text-center transition duration-300 transform hover:scale-105 shadow-lg">
+                            <span class="relative z-10">Explora Servicios</span>
+                        </a>
+                        <a href="#contacto" class="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white px-10 py-4 rounded-lg font-bold text-center transition duration-300 transform hover:scale-105 shadow-lg">
+                            <span class="relative z-10">Comenzar Proyecto</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                             alt="Profesional editando multimedia" 
+                             class="rounded-xl shadow-2xl w-full max-w-2xl mx-auto transform hover:scale-105 transition duration-500 border-4 border-white border-opacity-30">
+                        <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-red-600 rounded-full opacity-20 -z-10 animate-pulse"></div>
+                        <div class="absolute -top-12 -left-12 w-56 h-56 bg-black rounded-full opacity-5 -z-10 animate-pulse delay-300"></div>
+                        <div class="absolute top-20 -left-16 w-32 h-32 bg-white rounded-full opacity-10 -z-10 animate-pulse delay-500"></div>
+                        <div class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black to-transparent rounded-b-xl opacity-30"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-900 to-transparent"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestros <span class="text-red-600">Servicios</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Ofrecemos soluciones creativas y tecnológicas para potenciar la imagen de tu negocio.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100">
+                    <div class="h-48 bg-red-600 flex items-center justify-center">
+                        <i class="fas fa-photo-film text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Producción Multimedia</h3>
+                        <p class="text-gray-600 mb-4">Creamos contenido audiovisual profesional para potenciar tu presencia digital.</p>
+                        <a href="#contacto" class="text-red-600 font-medium hover:underline">Solicitar servicio →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100">
+                    <div class="h-48 bg-black flex items-center justify-center">
+                        <i class="fas fa-id-card text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Tarjetas de Presentación</h3>
+                        <p class="text-gray-600 mb-4">Diseños profesionales que dejan una impresión memorable y facilitan el networking para tu negocio.</p>
+                        <a href="#contacto" class="text-red-600 font-medium hover:underline">Solicitar servicio →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100">
+                    <div class="h-48 bg-red-600 flex items-center justify-center">
+                        <i class="fas fa-utensils text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Diseño de Menús</h3>
+                        <p class="text-gray-600 mb-4">Disposiciones atractivas y funcionales que realzan tus productos y mejoran la experiencia del cliente.</p>
+                        <a href="#contacto" class="text-red-600 font-medium hover:underline">Solicitar servicio →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100">
+                    <div class="h-48 bg-black flex items-center justify-center">
+                        <i class="fas fa-ad text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Flyers y Banners</h3>
+                        <p class="text-gray-600 mb-4">Diseños impactantes para campañas publicitarias que captan la atención de tu audiencia objetivo.</p>
+                        <a href="#contacto" class="text-red-600 font-medium hover:underline">Solicitar servicio →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100">
+                    <div class="h-48 bg-red-600 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Sistemas y Páginas Web</h3>
+                        <p class="text-gray-600 mb-4">Desarrollamos plataformas digitales funcionales, atractivas y optimizadas para todos los dispositivos.</p>
+                        <a href="#contacto" class="text-red-600 font-medium hover:underline">Solicitar servicio →</a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300 border border-gray-100">
+                    <div class="h-48 bg-black flex items-center justify-center">
+                        <i class="fas fa-photo-film text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Edición Multimedia</h3>
+                        <p class="text-gray-600 mb-4">Producción y edición profesional de videos e imágenes para tus campañas y redes sociales.</p>
+                        <a href="#contacto" class="text-red-600 font-medium hover:underline">Solicitar servicio →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestro <span class="text-red-600">Trabajo</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Algunos de nuestros proyectos destacados que demuestran nuestra calidad y creatividad.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item overflow-hidden rounded-lg shadow-lg bg-white">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Diseño de logo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Branding para Café Artesanal</h3>
+                        <p class="text-gray-600">Identidad visual completa incluyendo logo, papelería y empaques.</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item overflow-hidden rounded-lg shadow-lg bg-white">
+                    <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Tarjetas de presentación" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Tarjetas Ejecutivas</h3>
+                        <p class="text-gray-600">Diseño minimalista con relieve para agencia inmobiliaria.</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item overflow-hidden rounded-lg shadow-lg bg-white">
+                    <img src="https://images.unsplash.com/photo-1512485800893-b08ec1ea59b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Página web" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Boutique</h3>
+                        <p class="text-gray-600">Tienda online con sistema de pago integrado y diseño responsive.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="inline-block border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white px-6 py-3 rounded-full font-medium transition duration-300">Ver más proyectos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Equipo de Mist Design" class="rounded-lg shadow-xl w-full max-w-md mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Sobre <span class="text-red-600">Mist Design</span></h2>
+                    <p class="text-gray-600 mb-6">Somos un equipo apasionado por el diseño y la tecnología, comprometido con ofrecer soluciones creativas que impulsen el crecimiento de tu negocio.</p>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-red-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-lightbulb text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Innovación</h4>
+                                <p class="text-gray-600">Nos mantenemos actualizados con las últimas tendencias y tecnologías.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <div class="bg-red-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-heart text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Pasión</h4>
+                                <p class="text-gray-600">Amamos lo que hacemos y eso se refleja en cada proyecto.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check-circle text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Compromiso</h4>
+                                <p class="text-gray-600">Entregamos calidad y puntualidad en cada trabajo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contacto" class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-full font-medium transition duration-300">Conoce más sobre nosotros</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Lo que dicen <span class="text-red-600">nuestros clientes</span></h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Testimonios reales de empresas que han confiado en nuestros servicios.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"El logo que nos diseñó Mist Design capturó perfectamente la esencia de nuestra marca. Desde entonces hemos tenido un reconocimiento mayor en el mercado."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Cliente satisfecho" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana Martínez</h4>
+                            <p class="text-gray-500 text-sm">Directora, Boutique Moda</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Nuestra nueva página web ha aumentado las conversiones en un 40%. El equipo entendió exactamente lo que necesitábamos y superó nuestras expectativas."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente satisfecho" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Carlos Rodríguez</h4>
+                            <p class="text-gray-500 text-sm">CEO, TechSolutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Los diseños para nuestro menú han hecho que nuestros clientes ordenen más platillos premium. La creatividad del equipo es increíble."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente satisfecho" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Laura Gómez</h4>
+                            <p class="text-gray-500 text-sm">Propietaria, Restaurante Sabores</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-red-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contáctanos</h2>
+                <p class="max-w-2xl mx-auto text-red-100">Estamos listos para convertir tus ideas en realidad. ¡Escríbenos!</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h3 class="text-2xl font-bold mb-6">Información de contacto</h3>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-6">
+                         
+                        </div>
+                        
+                        <div class="flex items-start mb-6">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Teléfono</h4>
+                                <p class="text-red-100">+1 234 567 890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p class="text-red-100">contacto@mistdesign.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-6">Horario de atención</h3>
+                    <p class="text-red-100 mb-2"><span class="font-bold">Lunes a Viernes:</span> 9:00 AM - 6:00 PM</p>
+                    <p class="text-red-100"><span class="font-bold">Sábados:</span> 10:00 AM - 2:00 PM</p>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-black bg-opacity-30 p-8 rounded-lg backdrop-blur-sm">
+                        <h3 class="text-2xl font-bold mb-6">Oficinas</h3>
+                        
+                        <div class="mb-6 flex items-start">
+                            <div class="bg-white bg-opacity-20 p-3 rounded-full mr-6 flex-shrink-0">
+                                <i class="fas fa-building text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-2">Horario de atención</h4>
+                                <p class="text-red-100 mb-4">Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                                <p class="text-red-100">Sábados: 10:00 AM - 2:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-red-100 text-lg mb-8">Agenda una cita con nuestro equipo para discutir tu proyecto.</p>
+                        
+                        <div class="flex space-x-4">
+                            <a href="tel:+1234567890" class="bg-white text-red-600 hover:bg-gray-100 px-6 py-3 rounded-full font-medium flex items-center transition duration-300">
+                                <i class="fas fa-phone-alt mr-2"></i> Llamar
+                            </a>
+                            <a href="mailto:contacto@mistdesign.com" class="border-2 border-white hover:bg-white hover:text-red-600 px-6 py-3 rounded-full font-medium flex items-center transition duration-300">
+                                <i class="fas fa-envelope mr-2"></i> Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <a href="#" class="flex items-center mb-6">
+                        <span class="text-2xl font-bold text-red-600">MIST</span>
+                        <span class="text-2xl font-bold text-white">DESIGN</span>
+                    </a>
+                    <p class="text-gray-400">Transformamos ideas en diseños impactantes y soluciones digitales efectivas para tu negocio.</p>
+                    
+                    <div class="flex mt-6 space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-red-600 transition duration-300">
+                            <i class="fab fa-facebook-f text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-red-600 transition duration-300">
+                            <i class="fab fa-twitter text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-red-600 transition duration-300">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-red-600 transition duration-300">
+                            <i class="fab fa-linkedin-in text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Servicios</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition duration-300">Diseño de Logos</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition duration-300">Tarjetas de Presentación</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition duration-300">Menús y Flyers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition duration-300">Desarrollo Web</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-600 transition duration-300">Edición Multimedia</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Enlaces útiles</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-red-600 transition duration-300">Inicio</a></li>
+                        <li><a href="#servicios" class="text-gray-400 hover:text-red-600 transition duration-300">Servicios</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-red-600 transition duration-300">Portafolio</a></li>
+                        <li><a href="#nosotros" class="text-gray-400 hover:text-red-600 transition duration-300">Nosotros</a></li>
+                        <li><a href="#contacto" class="text-gray-400 hover:text-red-600 transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contacto</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-red-600"></i>
+                            <span class="text-gray-400">+1 234 567 890</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-red-600"></i>
+                            <span class="text-gray-400">contacto@mistdesign.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Mist Design. Todos los derechos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-red-600 text-sm transition duration-300">Política de privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-red-600 text-sm transition duration-300">Términos de servicio</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
